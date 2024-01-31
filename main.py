@@ -14,7 +14,7 @@ class balle:
         self.rayon = random.randint(10,30)
         self.change_x = 5
         self.change_y = 5
-        self.color = (255,0,0)
+        self.color = random.choice(COLORS)
     def update(self):
 
         self.x += self.change_x
@@ -46,7 +46,7 @@ class rectangle:
         self.height = random.randint(10,30)
         self.change_x = 5
         self.change_y = 5
-        self.color = (255,0,0)
+        self.color = random.choice(COLORS)
     def update(self):
 
         self.x += self.change_x
@@ -68,7 +68,7 @@ class rectangle:
         arcade.draw_rectangle_filled(self.x, self.y, self.width, self.height, self.color)
 
 
-COLORS = []
+COLORS = [arcade.color.ANTIQUE_FUCHSIA, arcade.color.DEEP_FUCHSIA, arcade.color.FUCHSIA_PURPLE, arcade.color.AERO_BLUE]
 
 # creer la classe de mygame pour faire fonctionner le jeu
 class MyGame(arcade.Window):
